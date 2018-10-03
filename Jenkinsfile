@@ -19,7 +19,7 @@ pipeline {
       }
       steps {
         ansiColor('xterm') {
-          withNPM(npmrcConfig: 'npm-jcurnow') {
+          withNPM(npmrcConfig: 'npm-jc21') {
             sh 'docker run --rm -v $(pwd):/app -w /app $DOCKER_NODE npm --registry=https://registry.npmjs.org publish'
           }
         }
