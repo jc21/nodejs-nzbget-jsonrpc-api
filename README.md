@@ -1,5 +1,9 @@
 # NzbGet JSONRPC API Client
 
+[![npm (scoped)](https://img.shields.io/npm/v/@jc21/nzbget-jsonrpc-api.svg?style=for-the-badge)](https://www.npmjs.com/package/@jc21/nzbget-jsonrpc-api)
+[![npm (types)](https://img.shields.io/npm/types/@jc21/nzbget-jsonrpc-api.svg?style=for-the-badge)](https://www.npmjs.com/package/@jc21/nzbget-jsonrpc-api)
+[![npm (licence)](https://img.shields.io/npm/l/@jc21/nzbget-jsonrpc-api.svg?style=for-the-badge)](https://www.npmjs.com/package/@jc21/nzbget-jsonrpc-api)
+
 See: https://nzbget.net/api/
 
 This client is designed for NZBGet v18+
