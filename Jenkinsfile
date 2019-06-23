@@ -13,21 +13,14 @@ pipeline {
         }
       }
     }
-    stage('Publish') {
-      when {
-        branch 'master'
-      }
-      steps {
-        ansiColor('xterm') {
-          withNPM(npmrcConfig: 'npm-jc21') {
-            sh 'docker run --rm -v $(pwd):/app -w /app $DOCKER_NODE npm --registry=https://registry.npmjs.org publish --access public'
-          }
-        }
-      }
-    }
   }
   post {
     success {
+      ansiColor('xterm') {
+        withNPM(npmrcConfig: 'npm-jc21') {
+          sh 'docker run --rm -v $(pwd):/app -w /app $DOCKER_NODE npm --registry=https://registry.npmjs.org publish --access public || echo "Skipping publish"'
+        }
+      }
       juxtapose event: 'success'
       sh 'figlet "SUCCESS"'
     }
@@ -37,4 +30,3 @@ pipeline {
     }
   }
 }
-
